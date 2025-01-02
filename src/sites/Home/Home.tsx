@@ -43,6 +43,22 @@ export default function Home() {
             url: "/tic-tac-toe",
             text: "Tic Tac Toe",
         },
+        {
+            url: "/tic-tac-toe",
+            text: "Tic Tac Toe",
+        },
+        {
+            url: "/tic-tac-toe",
+            text: "Tic Tac Toe",
+        },
+        {
+            url: "/tic-tac-toe",
+            text: "Tic Tac Toe",
+        },
+        {
+            url: "/tic-tac-toe",
+            text: "Tic Tac Toe",
+        },
     ];
 
     return (
