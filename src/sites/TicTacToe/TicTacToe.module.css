@@ -16,12 +16,12 @@
 }
 .field {
     background: var(--light);
-    border: solid var(--background);
     border-radius: 1rem;
     place-items: center;
     place-content: center;
     font-size: 3vw;
     font-weight: bold;
+    margin: 2px;
 }
 .clickable:hover {
     cursor: pointer;
@@ -32,5 +32,31 @@
     text-align: center;
 }
 .playerContainer {
+    width: 15vw;
+    border: 1px light-dark(#C0C0C0, #303030) solid;
+    margin: 2vh 2vw;
+    padding: 1vh 0;
+    border-radius: 1rem;
+}
+.turn {
+    border-width: 3px;
+}
+.winner {
+    background: gold;
 
+}
+.draw {
+    background: #ec9e66;
+
+}
+.difficulty {
+    width: calc(19vw);
+    padding: 2vh 1vw;
+    border-radius: 1rem;
+    background: var(--background);
+    margin: 1vh 2vw;
+    border: 1px light-dark(#C0C0C0, #303030) solid;
+}
+.difficulty:hover {
+    cursor: pointer;
 }

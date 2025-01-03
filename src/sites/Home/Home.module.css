@@ -6,7 +6,7 @@
 }
 #grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     justify-items: center;
     grid-gap: 1rem;
 }
@@ -16,6 +16,7 @@
     flex-grow: 1;
     width: calc(100% - 2rem);
     transition: border 0.3s;
+    overflow: hidden;
 }
 #gameContainer:hover {
     cursor: pointer;
@@ -23,8 +24,6 @@
 }
 .iframe {
     border: none;
-    border-top-left-radius: 1.1rem;
-    border-top-right-radius: 1.1rem;
     width: 100%;
     height: 20vh;
     background-color: mediumpurple;

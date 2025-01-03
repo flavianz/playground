@@ -68,7 +68,7 @@ export default function Home() {
                 {games.map((game, key) => {
                     return (
                         <Link to={game.url} key={key} id={styles.gameContainer}>
-                            <div className={styles.iframe} />
+                            <div className={styles.iframe}></div>
                             <h2 className={styles.gameName}>{game.text}</h2>
                         </Link>
                     );
