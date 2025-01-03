@@ -1,9 +1,7 @@
 #container {
     padding: 3vh 2vw;
 }
-#title {
-    margin-bottom: 2vh;
-}
+
 #grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
@@ -30,4 +28,21 @@
 }
 .gameName {
     margin: 1rem;
+}
+#selector {
+    display: flex;
+    margin-bottom: 3vh;
+}
+.title {
+    flex: 1;
+    text-align: center;
+    border-bottom: 1px var(--light) solid;
+    padding: 0 0 2vh 0;
+}
+.title:hover {
+    cursor: pointer;
+}
+.selected {
+    text-decoration: underline;
+    text-underline-offset: 1vh;
 }
