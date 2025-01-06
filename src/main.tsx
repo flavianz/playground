@@ -5,6 +5,7 @@ import { createHashRouter, RouterProvider } from "react-router-dom";
 import Home from "./sites/Home/Home.tsx";
 import TicTacToe from "./sites/TicTacToe/TicTacToe.tsx";
 import RandomNumberGenerator from "./sites/RandomNumberGenerator/RandomNumberGenerator.tsx";
+import UnitConverter from "./sites/UnitConverter/UnitConverter.tsx";
 
 const router = createHashRouter([
     {
@@ -13,6 +14,7 @@ const router = createHashRouter([
     },
     { path: "/tic-tac-toe", element: <TicTacToe /> },
     { path: "/random-number", element: <RandomNumberGenerator /> },
+    { path: "/unit-converter", element: <UnitConverter /> },
 ]);
 
 createRoot(document.getElementById("root")!).render(

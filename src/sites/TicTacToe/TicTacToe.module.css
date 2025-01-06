@@ -42,11 +42,10 @@
     border-width: 3px;
 }
 .winner {
-    background: gold;
-
+    background: light-dark(#FFD700, #9a882f);
 }
 .draw {
-    background: #ec9e66;
+    background: light-dark(#ec9e66, #a36434);
 
 }
 .difficulty {

@@ -15,6 +15,10 @@ export default function Home() {
             url: "/random-number",
             text: "Random Number Generator",
         },
+        {
+            url: "/unit-converter",
+            text: "Unit Converter",
+        },
     ];
 
     return (
