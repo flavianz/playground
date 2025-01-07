@@ -22,3 +22,64 @@
 .grosse:hover {
     cursor: pointer;
 }
+#converterContainer {
+    flex: 1;
+    place-content: center;
+    place-items: center;
+    display: flex;
+}
+#equal {
+    font-weight: bold;
+    font-size: 6rem;
+    margin: 0 3vw;
+}
+.unitContainer {
+    display: flex;
+    flex-direction: column;
+    min-width: 15vw;
+    min-height: 20vh;
+    border: var(--light) solid 1px;
+    border-radius: 2rem;
+    overflow: hidden;
+    background: var(--light);
+}
+.fromTo {
+    text-align: center;
+    padding: 1vh 0;
+    background: var(--background);
+}
+.input {
+    flex: 2;
+    font-size: 3rem;
+    width: auto;
+    text-align: center;
+    background: var(--light);
+    border: none;
+    border-bottom: 1px var(--medium) solid;
+}
+.input:focus {
+    outline: none;
+}
+.selector {
+    flex: 1;
+    text-align: center;
+    background: var(--light);
+    border: none;
+
+    margin: 0 2vw;
+    font-size: 1.2rem;
+}
+.selector:focus {
+    outline: none;
+}
+
+/* Remove arrows */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
