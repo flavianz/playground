@@ -17,7 +17,7 @@
     padding: 0 2vw;
 }
 .selected {
-    background: var(--text-muted);
+    background: var(--medium);
 }
 .grosse:hover {
     cursor: pointer;
