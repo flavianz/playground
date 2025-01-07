@@ -1,0 +1,24 @@
+#container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+#grossenContainer {
+    display: flex;
+    flex-direction: column;
+    height: 96vh;
+    border-right: var(--light) solid 1px;
+    padding: 2vh 0;
+    background: var(--light);
+}
+.grosse{
+    flex: 1;
+    place-content: center;
+    padding: 0 2vw;
+}
+.selected {
+    background: var(--text-muted);
+}
+.grosse:hover {
+    cursor: pointer;
+}

@@ -1,3 +1,4 @@
+import styles from "./UnitConverter.module.css";
 import { useState } from "react";
 
 const grossen: {
@@ -42,24 +43,32 @@ export default function UnitConverter() {
     );
 
     return (
-        <div>
-            <select name="grösse" onChange={(e) => setGrosse(e.target.value)}>
+        <div id={styles.container}>
+            <div id={styles.grossenContainer}>
                 {Object.keys(grossen).map((name, key) => {
                     return (
-                        <option
+                        <div
                             key={key}
-                            value={name.toLowerCase().replaceAll(" ", "-")}
+                            className={styles.grosse + " " + ()}
+                            onClick={() => {
+                                let id = name
+                                    .toLowerCase()
+                                    .replaceAll(" ", "-");
+                                setGrosse(id);
+                                setFromUnit(grossen[id][0]);
+                                setToUnit(grossen[id][1]);
+                            }}
                         >
-                            {name}
-                        </option>
+                            <p>{name}</p>
+                        </div>
                     );
                 })}
-            </select>
+            </div>
             <label>
                 From
                 <input
                     type="number"
-                    value={fromValue}
+                    value={isNaN(fromValue) ? "" : fromValue}
                     onChange={(e) => {
                         setFromValue(round(parseFloat(e.target.value)));
                         setToValue(
@@ -77,7 +86,13 @@ export default function UnitConverter() {
                             e.target.value.split("#")[0],
                             parseFloat(e.target.value.split("#")[1]),
                         ]);
+                        setToValue(
+                            (fromValue /
+                                parseFloat(e.target.value.split("#")[1])) *
+                                toUnit[1],
+                        );
                     }}
+                    defaultValue={fromUnit[0] + "#" + fromUnit[1]}
                 >
                     {grossen[grosse].map((units, key) => {
                         return (
@@ -92,7 +107,7 @@ export default function UnitConverter() {
                 To
                 <input
                     type="number"
-                    value={toValue}
+                    value={isNaN(toValue) ? "" : toValue}
                     onChange={(e) => {
                         setToValue(round(parseFloat(e.target.value)));
                         setToValue(
@@ -110,7 +125,12 @@ export default function UnitConverter() {
                             e.target.value.split("#")[0],
                             parseFloat(e.target.value.split("#")[1]),
                         ]);
+                        setToValue(
+                            (fromValue / fromUnit[1]) *
+                                parseFloat(e.target.value.split("#")[1]),
+                        );
                     }}
+                    defaultValue={toUnit[0] + "#" + toUnit[1]}
                 >
                     {grossen[grosse].map((units, key) => {
                         return (
