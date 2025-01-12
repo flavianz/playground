@@ -1,25 +1,26 @@
 import styles from "./Home.module.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import TicTacToe from "../../assets/tictactoe.svg";
 
 export default function Home() {
     const [selected, setSelected] = useState(true);
     const games = [
         {
             url: "/tic-tac-toe",
-            text: "Tic Tac Toe",
-            icon: TicTacToe,
+            text: "TIC TAC TOE",
+            color: "#dd4949",
         },
     ];
     const tools = [
         {
             url: "/random-number",
-            text: "Random Number Generator",
+            text: "RANDOM NUMBER",
+            color: "#49dd67",
         },
         {
             url: "/unit-converter",
-            text: "Unit Converter",
+            text: "UNIT CONVERTER",
+            color: "#49badd",
         },
     ];
 
@@ -51,10 +52,12 @@ export default function Home() {
                 {(selected ? games : tools).map((game, key) => {
                     return (
                         <Link to={game.url} key={key} id={styles.gameContainer}>
-                            <div className={styles.iframe}>
-                                <img src={game.icon} alt="" />
+                            <div
+                                className={styles.iframe}
+                                style={{ background: game.color }}
+                            >
+                                <h2 className={styles.gameName}>{game.text}</h2>
                             </div>
-                            <h2 className={styles.gameName}>{game.text}</h2>
                         </Link>
                     );
                 })}

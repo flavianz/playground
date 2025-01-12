@@ -29,6 +29,8 @@
 }
 .gameName {
     margin: 1rem;
+    font-size: 2rem;
+    color: var(--background);
 }
 #selector {
     display: flex;
