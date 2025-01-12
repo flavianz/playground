@@ -36,7 +36,7 @@
 .unitContainer {
     display: flex;
     flex-direction: column;
-    min-width: 15vw;
+    max-width: 30vw;
     min-height: 20vh;
     border: var(--light) solid 1px;
     border-radius: 2rem;

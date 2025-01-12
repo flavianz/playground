@@ -1,6 +1,7 @@
 import styles from "./Home.module.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import TicTacToe from "../../assets/tictactoe.svg";
 
 export default function Home() {
     const [selected, setSelected] = useState(true);
@@ -8,6 +9,7 @@ export default function Home() {
         {
             url: "/tic-tac-toe",
             text: "Tic Tac Toe",
+            icon: TicTacToe,
         },
     ];
     const tools = [
@@ -49,7 +51,9 @@ export default function Home() {
                 {(selected ? games : tools).map((game, key) => {
                     return (
                         <Link to={game.url} key={key} id={styles.gameContainer}>
-                            <div className={styles.iframe}></div>
+                            <div className={styles.iframe}>
+                                <img src={game.icon} alt="" />
+                            </div>
                             <h2 className={styles.gameName}>{game.text}</h2>
                         </Link>
                     );

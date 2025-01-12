@@ -106,7 +106,7 @@ const grossen: {
         Gradian: 200 / 180,
         Arcsecond: 3600,
         "Minute of Arc": 60,
-        Milliraian: (1000 * Math.PI) / 180,
+        Milliradian: (1000 * Math.PI) / 180,
     },
     Pressure: {
         Pascal: 1,

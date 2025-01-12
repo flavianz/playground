@@ -54,7 +54,7 @@
         color: forestgreen;
     }
     50% {
-        color: #0a4c0a;
+        color: color-mix(in, var(--text), forestgreen);
     }
     100% {
         color: var(--text);
