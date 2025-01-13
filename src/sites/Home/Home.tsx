@@ -10,6 +10,16 @@ export default function Home() {
             text: "TIC TAC TOE",
             color: "#dd4949",
         },
+        {
+            url: "/sudoku",
+            text: "SUDOKU",
+            color: "#9149dd",
+        },
+        {
+            url: "/2048",
+            text: "SLIDING 8",
+            color: "#ddae49",
+        },
     ];
     const tools = [
         {
@@ -21,6 +31,26 @@ export default function Home() {
             url: "/unit-converter",
             text: "UNIT CONVERTER",
             color: "#49badd",
+        },
+        {
+            url: "/number-converter",
+            text: "NUMBER CONVERTER",
+            color: "#495ddd",
+        },
+        {
+            url: "/unit-converter",
+            text: "STOPWATCH",
+            color: "#dd4949",
+        },
+        {
+            url: "/color-picker",
+            text: "COLOR PICKER",
+            color: "#dda949",
+        },
+        {
+            url: "/uuid-generator",
+            text: "UUID GENERATOR",
+            color: "#dd49b3",
         },
     ];
 
