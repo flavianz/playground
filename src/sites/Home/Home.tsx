@@ -9,16 +9,55 @@ export default function Home() {
             url: "/tic-tac-toe",
             text: "TIC TAC TOE",
             color: "#dd4949",
+            unreleased: false,
         },
         {
             url: "/sudoku",
             text: "SUDOKU",
-            color: "#9149dd",
+            color: "#ddbf49",
+            unreleased: true,
         },
         {
             url: "/2048",
+            text: "2048",
+            color: "#b349dd",
+            unreleased: true,
+        },
+        {
+            url: "/2048",
+            text: "2048",
+            color: "#4962dd",
+            unreleased: true,
+        },
+        {
+            url: "/2048",
+            text: "2048",
+            color: "#7fdd49",
+            unreleased: true,
+        },
+        {
+            url: "/2048",
+            text: "2048",
+            color: "#49b1dd",
+            unreleased: true,
+        },
+        {
+            url: "/sudoku",
+            text: "SUDOKU",
+            color: "#4993dd",
+            unreleased: true,
+        },
+        {
+            url: "/sliding-8",
             text: "SLIDING 8",
             color: "#ddae49",
+            unreleased: true,
+        },
+        {
+            url: "/2048",
+            text: "2048",
+            color: "#69dd49",
+            unreleased: true,
         },
     ];
     const tools = [
@@ -26,31 +65,44 @@ export default function Home() {
             url: "/random-number",
             text: "RANDOM NUMBER",
             color: "#49dd67",
+            unreleased: false,
         },
         {
             url: "/unit-converter",
             text: "UNIT CONVERTER",
             color: "#49badd",
+            unreleased: false,
+        },
+
+        {
+            url: "/counter",
+            text: "COUNTER",
+            color: "#dd49b3",
+            unreleased: false,
         },
         {
             url: "/number-converter",
             text: "NUMBER CONVERTER",
             color: "#495ddd",
+            unreleased: true,
         },
         {
             url: "/unit-converter",
             text: "STOPWATCH",
             color: "#dd4949",
+            unreleased: true,
         },
         {
             url: "/color-picker",
             text: "COLOR PICKER",
             color: "#dda949",
+            unreleased: true,
         },
         {
             url: "/uuid-generator",
             text: "UUID GENERATOR",
             color: "#dd49b3",
+            unreleased: true,
         },
     ];
 
@@ -80,7 +132,7 @@ export default function Home() {
             </div>
             <div id={styles.grid}>
                 {(selected ? games : tools).map((game, key) => {
-                    return (
+                    return game.unreleased ? undefined : (
                         <Link to={game.url} key={key} id={styles.gameContainer}>
                             <div
                                 className={styles.iframe}
