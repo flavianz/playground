@@ -213,15 +213,13 @@ export default function UnitConverter() {
 
     return (
         <div id={styles.container}>
-            <div id={styles.grossenContainer}>
+            <div className={"selectorContainer"}>
                 {Object.keys(grossen).map((name, key) => {
                     return (
                         <div
                             key={key}
                             className={
-                                styles.grosse +
-                                " " +
-                                (grosse === name ? styles.selected : "")
+                                "selector " + (grosse === name && "selected")
                             }
                             onClick={() => {
                                 setGrosse(name);

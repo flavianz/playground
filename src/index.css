@@ -27,3 +27,25 @@ a {
   color: var(--text);
   text-decoration: none;
 }
+
+.selectorContainer  {
+  display: flex;
+  flex-direction: column;
+  height: 96vh;
+  border-right: var(--light) solid 1px;
+  padding: 2vh 0;
+  background: var(--light);
+  width: 15vw;
+  min-width: 200px;
+  .selected {
+    background: var(--medium);
+  }
+  .selector{
+    flex: 1;
+    place-content: center;
+    padding: 0 2vw;
+  }
+  .selector:hover {
+    cursor: pointer;
+  }
+}

@@ -3,25 +3,8 @@
     width: 100%;
     height: 100vh;
 }
-#grossenContainer {
-    display: flex;
-    flex-direction: column;
-    height: 96vh;
-    border-right: var(--light) solid 1px;
-    padding: 2vh 0;
-    background: var(--light);
-}
-.grosse{
-    flex: 1;
-    place-content: center;
-    padding: 0 2vw;
-}
-.selected {
-    background: var(--medium);
-}
-.grosse:hover {
-    cursor: pointer;
-}
+
+
 #converterContainer {
     flex: 1;
     place-content: center;
@@ -65,7 +48,6 @@
     text-align: center;
     background: var(--light);
     border: none;
-
     margin: 0 2vw;
     font-size: 1.2rem;
 }
